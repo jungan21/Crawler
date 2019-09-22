@@ -14,7 +14,7 @@ article_list_re = re.compile('var msgList = (.*?)}}]};')
 class ExampleSpider(scrapy.Spider):
     name = 'example'
     allowed_domains = ['github.com']
-    start_urls = ["https://github.com/stevechae?tab=repositories"]
+    start_urls = ["https://github.com/pnorman/josm-presets/blob/master/shops.xml"]
 
     def parse(self, response):
         # Write your code here
@@ -24,4 +24,3 @@ class ExampleSpider(scrapy.Spider):
         if (text.find ("Account") | text.find ("Password") | text.find ("account number") | text.find("scotiabank")):
             print ("FOUND IT!!!!!!!!!!!")
 
-      
